@@ -1,40 +1,30 @@
 #include <stdio.h>
 #include <string.h>
-#include <math.h>
 
 #include "funcs2.h"
+#include "funcs8.h"
 
-int bin_10 (char* ch) {
+int oct_10 (char* ch) {
     int sum = 0;
-    int pow2 = 1;
+    int pow = 1;
     for (int i = strlen(ch) - 1; i > -1; i--) {
-        if (ch[i] == '1') {
-            sum += pow2;
-        }
-        pow2 *= 2;
+        int c = (int)ch[i] - '0';
+        sum += pow * c;
+        pow *= 8;
     }
     return sum;
 }
 
-int my_pow(int a, int b) {
-    int res = 1;
-    while( b > 0) {
-        res *= a;
-        b -= 1;
-    }
-    return res;
-}
-
-int _10_bin(int ch) {
+int _10_oct (int ch) {
     int pres = 0;
     int k0 = 0;
     while (ch > 0) {
-        pres += ch % 2;
-        if (pres == 0 && ch % 2 == 0) {
+        pres += ch % 8;
+        if (pres == 0 && ch % 8 == 0) {
             k0 += 1;
         }
         pres *= 10;
-        ch /= 2;
+        ch /= 8;
         if (ch <= 0) {
             pres /= 10;
         }
