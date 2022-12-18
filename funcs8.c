@@ -7,6 +7,8 @@
 int oct_10 (char* ch) {
     int sum = 0;
     int pow = 1;
+    memmove(&ch[0], &ch[1], strlen(ch) - 1);
+    ch[strlen(ch) - 1] = '\0';
     for (int i = strlen(ch) - 1; i > -1; i--) {
         int c = (int)ch[i] - '0';
         sum += pow * c;

@@ -1,6 +1,6 @@
 .PHONY: all clean run
 
-Makefile = main.o funcs.o funcs2.o funcs8.o
+Makefile = main.o funcs.o funcs2.o funcs8.o funcs16.o
 
 all: main
 run:
@@ -17,3 +17,5 @@ funcs2.o: funcs2.c
 	gcc -c funcs2.c -o funcs2.o
 funcs8.o: funcs8.c
 	gcc -c funcs8.c -o funcs8.o
+funcs16.o: funcs16.c
+	gcc -c funcs16.c -o funcs16.o

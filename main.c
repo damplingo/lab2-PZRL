@@ -6,6 +6,7 @@
 #include "funcs.h"
 #include "funcs2.h"
 #include "funcs8.h"
+#include "funcs16.h"
 
 int main() {
     char str[30] = "16 + 45";
