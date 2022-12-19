@@ -1,14 +1,14 @@
 .PHONY: all clean run
 
-Makefile = main.o funcs.o funcs2.o funcs8.o funcs16.o
+comand= main.o funcs.o funcs2.o funcs8.o funcs16.o
 
 all: main
-run:
+run: main
 	./main
 clean:
 	rm *.o main
-main: $(Makefile)
-	gcc $(Makefile) -o main
+main: $(comand)
+	gcc $(comand) -o main
 main.o: main.c
 	gcc -c main.c -o main.o
 funcs.o: funcs.c

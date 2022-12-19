@@ -1,8 +1,10 @@
 #include <stdio.h>
 #include <string.h>
 #include <math.h>
+#include <stdlib.h>
 
 #include "funcs2.h"
+#include "funcs.h"
 
 int bin_10 (char* ch) {
     int sum = 0;
@@ -50,3 +52,11 @@ int _10_bin(int ch) {
     return res * my_pow(10, k0);
 }
 
+/*int main() {
+    char *s = NULL;
+    size_t len = 0;
+    getline(&s, &len, stdin);
+    systsch(s);
+    printf("%d", bin_10(s));
+    return 0;
+}*/
