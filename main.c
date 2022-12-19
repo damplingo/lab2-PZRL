@@ -66,6 +66,10 @@ int main() {
             prois(sch1, ich1, ich2);
             break;
         case '%':
+            if (ich2 == 0) {
+                    printf("а возможно ли деление на 0?)");
+                    return 0;
+            }
             ostat(sch1, ich1, ich2);
             break;
         case '|':
