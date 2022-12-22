@@ -19,12 +19,23 @@ int main() {
     int znak_ch2 = 1;
     printf("введите выражение\n");
     getline(&str, &len, stdin);
+    for (int i = 0; i < strlen(str); ++i) {
+        if (str[i] == '~' && i != 0) {
+            printf("ошибка знака");
+            return 0;
+        }
+    }
+    char pz = str[0];
     input(str, ch1, ch2, znak);
     if (ch1[0] == '-') { //проверка на отрицательной число
         znak_ch1 = -1;
     }
     if (ch2[0] == '-' || ch2[1] == '-') {
         znak_ch2 = -1;
+    }
+    if (znak[0] != '+' && znak[0] != '-' && znak[0] != '*' && znak[0] != '%' && znak[0] != '^' && znak[0] != '&' && znak[0] != '|' && znak[0] != '~') {
+        printf("ошибка знака");
+        return 0;
     }
     int sch1 = systsch(ch1);
     int sch2 = systsch(ch2);
