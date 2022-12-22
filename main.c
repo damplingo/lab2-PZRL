@@ -21,7 +21,7 @@ int main() {
     getline(&str, &len, stdin);
     for (int i = 0; i < strlen(str); ++i) {
         if (str[i] == '~' && i != 0) {
-            printf("ошибка знака");
+            printf("ошибка");
             return 0;
         }
     }
@@ -34,18 +34,18 @@ int main() {
         znak_ch2 = -1;
     }
     if (znak[0] != '+' && znak[0] != '-' && znak[0] != '*' && znak[0] != '%' && znak[0] != '^' && znak[0] != '&' && znak[0] != '|' && znak[0] != '~') {
-        printf("ошибка знака");
+        printf("ошибка");
         return 0;
     }
     int sch1 = systsch(ch1);
     int sch2 = systsch(ch2);
     if (sch1 == 0) {
-        printf("первое число не принадлежит доступным системам счисления");
+        printf("число не принадлежит доступным системам счисления");
         return 0;
     }
     if (str[0] != '~') {
         if (sch2 == 0) {
-            printf("второе число не принадлежит доступным системам счисления");
+            printf("число не принадлежит доступным системам счисления");
             return 0;
         }
         if (sch1 != sch2) {
